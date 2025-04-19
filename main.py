@@ -118,6 +118,23 @@ class DemoModal(ModalScreen):
         ("m", "action_dismiss", "Close"),
     ]
 
+    @property
+    def app(self):
+        if hasattr(self, '_app') and self._app is not None:
+            return self._app
+        try:
+            from textual._context import active_app
+            return active_app.get()
+        except LookupError:
+            class DummyLogger:
+                def warning(self, msg):
+                    pass
+
+            class DummyApp:
+                _logger = DummyLogger()
+
+            return DummyApp()
+
     def compose(self) -> ComposeResult:
         # Compose modal dialog with a simple static message.
         yield Static("This is a modal dialog!\nPress M or Esc to close.", id="modal_label")
