@@ -1,0 +1,13 @@
+# Ignore virtual environment directories
+.venv/
+.venv_run/
+
+# Ignor python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.whl

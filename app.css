@@ -1,0 +1,38 @@
+/* Sidebar styling */
+#sidebar {
+  border: heavy $primary;
+  width: 30%;
+  padding: 1 1;
+}
+
+/* Content styling */
+#content {
+  border: heavy $secondary;
+  padding: 1 1;
+}
+
+/* Modal styling */
+#demo-modal {
+  layer: overlay;
+  align: center middle;
+  width: 60%;
+  height: 30%;
+  border: round red;
+  background: $panel;
+}
+
+/* Button styling */
+Button {
+  margin: 1 1;
+}
+
+/* Input styling */
+Input {
+  padding: 1;
+}
+
+/* ProgressBar styling */
+ProgressBar {
+  height: 1;
+  width: 100%;
+}
